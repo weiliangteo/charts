@@ -333,7 +333,9 @@ ingressController:
   image:
     repository: kong/kubernetes-ingress-controller
     tag: "1.2"
-  args: []
+  args:
+  # this arg should always be present outside certain debug scenarios
+  - /kong-ingress-controller
 
   # Specify Kong Ingress Controller configuration via environment variables
   env:
