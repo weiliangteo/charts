@@ -2,6 +2,9 @@
 # - ingressController deploys with a database
 # - stream listens work
 ingressController:
+  image:
+    repository: traines/kic
+    tag: rg-test
   enabled: true
   installCRDs: false
   env:

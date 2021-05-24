@@ -5,6 +5,9 @@ proxy:
 env:
   anonymous_reports: "off"
 ingressController:
+  image:
+    repository: traines/kic
+    tag: rg-test
   env:
     anonymous_reports: "false"
   installCRDs: false

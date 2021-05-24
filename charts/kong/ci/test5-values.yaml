@@ -7,6 +7,9 @@
 #   does not interfere with startup when there is no file to remove.
 
 ingressController:
+  image:
+    repository: traines/kic
+    tag: rg-test
   enabled: true
   installCRDs: false
   env:
