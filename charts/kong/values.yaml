@@ -359,6 +359,7 @@ ingressController:
   rbac:
     # Specifies whether RBAC resources should be created
     create: true
+    version: v2
 
   serviceAccount:
     # Specifies whether a ServiceAccount should be created
