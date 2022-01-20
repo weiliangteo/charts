@@ -10,9 +10,7 @@ kubectl apply -f https://raw.githubusercontent.com/Kong/charts/main/charts/kong/
 
 ## Unreleased
 
-### Improvements
-
-* Added support for non `KONG_` prefixed custom environment variables
+Nothing yet.
 
 ## 2.6.5
 
