@@ -26,6 +26,10 @@ deployment:
   #  name:
   #  annotations: {}
 
+  # Set to "true" for hybrid mode data plane nodes (or other Kong Deployments with the ingress controlle disabled)
+  # that run under Kuma. This patches the Kuma sidecar to load the service token, which isn't otherwise available to data planes
+    enableKumaPatch: false
+
   ## Optionally specify any extra sidecar containers to be included in the deployment
   ## See https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core
   # sidecarContainers:

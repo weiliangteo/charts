@@ -38,6 +38,9 @@ spec:
   template:
     metadata:
       annotations:
+        {{- if .Values.deployment.serviceAccount.enableKumaPatch }}
+        kuma.io/container-patches: {{ template "kong.fullname" . }}-kuma-patch
+        {{- end }}
         {{- if (and (not .Values.ingressController.enabled) (eq .Values.env.database "off" )) }}
         {{- if .Values.dblessConfig.config }}
         checksum/dbless.config: {{ toYaml .Values.dblessConfig.config | sha256sum }}
